@@ -1,0 +1,29 @@
+@font-face {
+    font-family: monospace;
+    src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
+}
+$title-font-family: 'IBM Plex Mono', monospace;
+$title-tracking: .15em;
+
+h1,h2,h3{
+    font-family: $title-font-family;
+    margin-bottom: .2em;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: $title-tracking;
+    color:blue;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+p {
+    font-size: .875em;
+    line-height: 1.4em;
+}
+
