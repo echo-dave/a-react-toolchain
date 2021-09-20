@@ -5,7 +5,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: './client/src',
   mode: isDevelopment ? 'development' : 'production',
-  devtool: 'source-map',
+  devtool: isDevelopment ? 'eval' : 'source-map',
   module: {
     rules: [
       {
@@ -25,7 +25,12 @@ module.exports = {
           "css-loader",
           'resolve-url-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          {
+            loader:"sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
         ],
       },
       {
